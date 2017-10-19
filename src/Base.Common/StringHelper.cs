@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSM.Common
+namespace Base.Common
 {
     public static class StringHelper
     {

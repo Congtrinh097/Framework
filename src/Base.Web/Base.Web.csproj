@@ -20,6 +20,12 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Base.Common\Base.Common.csproj" />
+    <ProjectReference Include="..\Base.Entities\Base.Entities.csproj" />
+    <ProjectReference Include="..\Base.Repository\Base.Repository.csproj" />
+  </ItemGroup>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

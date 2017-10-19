@@ -1,7 +1,7 @@
 ﻿
-using CSM.Entities;
+using Base.Entities;
 using HTActive.Core.Repository;
-namespace CSM.Repository
+namespace Base.Repository
 {
     public partial interface IClaimRepository : IBaseRepository<Claim>
     {

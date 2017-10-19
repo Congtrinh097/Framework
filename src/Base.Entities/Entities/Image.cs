@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CSM.Entities
+namespace Base.Entities
 {
     public class Image
     {

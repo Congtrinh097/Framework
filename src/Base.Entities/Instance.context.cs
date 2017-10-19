@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CSM.Entities
+namespace Base.Entities
 {
     public partial class InstanceEntities : DbContext
     {
@@ -25,23 +25,23 @@ namespace CSM.Entities
             modelBuilder.Entity<User>()
                  .HasMany(x => x.UserProfiles)
                  .WithOne(x => x.User)
-                 .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+                 .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
             modelBuilder.Entity<User>()
                 .HasMany(x => x.UserRoles)
                 .WithOne(x => x.User)
-                .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
             modelBuilder.Entity<User>()
                 .HasMany(x => x.UserLoginTokens)
                 .WithOne(x => x.User)
-                .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
             modelBuilder.Entity<Claim>()
                 .HasMany(x => x.RoleClaims)
                 .WithOne(x => x.Claim)
-                .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
             modelBuilder.Entity<Role>()
                 .HasMany(x => x.RoleClaims)
                 .WithOne(x => x.Role)
-                .OnDelete(Microsoft.EntityFrameworkCore.Metadata.DeleteBehavior.Cascade);
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Cascade);
 
 
         }

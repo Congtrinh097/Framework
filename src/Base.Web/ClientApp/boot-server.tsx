@@ -25,6 +25,7 @@ export default createServerRenderer(params => {
                 <StaticRouter basename={ basename } context={ routerContext } location={ params.location.path } children={ routes } />
             </Provider>
         );
+        debugger;
         renderToString(app);
 
         // If there's a redirection, just send this information back to the host application

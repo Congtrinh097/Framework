@@ -1,10 +1,10 @@
 ﻿
-using CSM.Entities;
+using Base.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using HTActive.Core.Repository;
 using System;
 
-namespace CSM.Repository
+namespace Base.Repository
 {
     public class InstanceUnitOfWork : BaseUnitOfWork<InstanceEntities>
     {
@@ -13,11 +13,11 @@ namespace CSM.Repository
         {
         }
     }
-    public class CSMDBRepository
+    public class BaseDBRepository
     {
 	    public IServiceProvider ServiceProvider{get;private set;}
 		public IBaseUnitOfWork<InstanceEntities> InstanceUnitOfWork{get;private set;}
-        public CSMDBRepository(IBaseUnitOfWork<InstanceEntities> unitOfWork, IServiceProvider _serviceProvider)
+        public BaseDBRepository(IBaseUnitOfWork<InstanceEntities> unitOfWork, IServiceProvider _serviceProvider)
         {
 			this.InstanceUnitOfWork = unitOfWork;
 			this.ServiceProvider = _serviceProvider;
